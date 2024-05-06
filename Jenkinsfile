@@ -13,7 +13,8 @@ pipeline {
         stage('Test') {
             steps {
                 // Run tests
-                bat 'mvn test'
+                bat 'mvn test surefire-report:report'
+
             }
         }
         stage('Deploy') {
